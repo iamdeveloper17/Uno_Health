@@ -1,0 +1,360 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: sans-serif
+}
+
+#main{
+    height: 100vh;
+    width: 100%;
+}
+
+#header{
+    height: 100vh;
+    width: 100%;
+}
+
+#navbar{
+    background-color: rgb(236, 236, 236);
+    height: 10vh;
+    width: 100%;
+    padding-top: 1px;
+}
+
+nav{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    width: 80%;
+    /* background-color: red; */
+    padding: 0.7vw;
+    margin-left: 10%;
+    /* margin: 1vh 10% 1vh 10%; */
+}
+
+#logo{
+    width: 20%;
+    /* background-color: red; */
+    font-size: 1.2vw;
+}
+
+#links{
+    width: 60%;
+    /* background-color: blue; */
+    display: block;
+}
+
+#menu{
+    display: none;
+}
+
+#links ul li{
+    list-style-type: none;
+    margin: 0 0 0 .2vw;
+}
+
+#links ul li a{
+    text-decoration: none;
+    color: black;
+    font-size: 1vw;
+    font-weight: 400;
+    /* background-color: red; */
+    padding: 4vh;
+}
+
+#links ul{
+    display: flex;
+    /* align-items: center; */
+}
+
+#services{
+    position: relative;
+}
+
+#services:hover #service_dropdown{
+    /* transition: 1s; */
+    visibility: visible;
+    /* display: inline-block; */
+    /* transition: ease-in 0.5s all; */
+    /* animation: anime .2s; */
+}
+
+/* @keyframes anime {
+    from{
+        top: 0px;
+    }
+    to{
+        top: 100px;
+    }
+} */
+
+#services:hover .ri-arrow-down-s-line{
+    transform: rotate(180deg);
+    display: inline-block;
+    /* transition: ease-in 0.2s all; */
+}
+
+#service_dropdown{
+    background-color: rgba(236, 236, 236, 0.5);
+    /* background-color: rgb(255, 54, 54); */
+    position: absolute;
+    top: 6vh;
+    left: 0;
+    /* display: flex; */
+    flex-direction: column;
+    /* flex-wrap: wrap; */
+    visibility: hidden;
+    white-space: nowrap;
+    /* transition: ease-in 2s; */
+}
+
+#service_dropdown li{
+    margin: .3vw 0 !important;
+}
+
+/* #service_dropdown li:first-child{
+    margin: .1vw 0 .3vw 0 !important;
+} */
+
+#service_dropdown li a{
+    /* background-color: rgb(180, 180, 180); */
+    /* width: fit-content; */
+    padding: .2vw 1vw !important;
+    width: 100% !important;
+    font-size: .9vw !important;
+}
+
+#service_dropdown li a:hover{
+    background-color: rgb(180, 180, 180);
+}
+
+#section{
+    width: 100%;
+    height: 90vh;
+    overflow: hidden;
+}
+
+#section img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+#products{
+    width: 100%;
+    height: 100vh;
+}
+
+#products h1, #machine h1{
+    font-size: 5vw;
+    text-align: center;
+    font-weight: 400;
+}
+
+#products_section{
+    width: 80%;
+    margin-left: 10%;
+    padding: 5vh 0;
+}
+
+#products_image{
+    display: flex;
+    /* flex-wrap: wrap; */
+    justify-content: space-between;
+    align-items: center;
+    /* background-color: red; */
+    margin-top: 2vw;
+}
+
+#products_image a{
+    height: 65vh;
+    width: 33%;
+    /* background-color: blue; */
+    overflow: hidden;
+}
+
+#products_image a img{
+    object-fit: cover;
+}
+
+#products_image a:hover img{
+    scale: 1.2;
+    transition: ease-in-out .4s all;
+}
+
+#machine{
+    width: 100%;
+    height: 100vh;
+    padding: 5vh 0;
+}
+
+#machine_details{
+    width: 80%;
+    margin-left: 10%;
+    padding: 15vh 0;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#machine_details div{
+    width: calc(50% - 20px);
+    padding: 0 20px;
+}
+
+#machine_details div img{
+    width: 100%;
+}
+
+#about_machine h2{
+    font-size: 3vw;
+    font-weight: 400;
+}
+
+#about_machine p{
+    font-size: 1vw;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+#about_machine a{
+    text-decoration: none;
+    font-size: 1.1vw;
+    padding: .4vw 1vw;
+    border-radius: 10px;
+    border: 1px solid royalblue;
+    background-color: royalblue;
+    color: whitesmoke;
+}
+
+@media screen and (max-width: 768px) {
+    #navbar{
+        background-color: rgb(236, 236, 236);
+    }
+    
+    nav{
+        display: flex;
+    }
+    
+    #logo{
+        width: 40%;
+        font-size: 2.4vw;
+    }
+    
+    #links{
+        display: none;
+        position: absolute;
+        top: 10vh;
+        left: 10%;
+        background-color: rgba(236, 236, 236, 0.5);
+        width: 80%;
+        height: fit-content;
+    }
+
+    #menu{
+        display: block;
+        font-size: 2.6vw;
+        position: relative;
+    }
+
+    #menu:hover{
+        cursor: pointer;
+    }
+    
+    #links ul li a{
+        font-size: 2vw;
+        width: 100% !important;
+        display: inline-block;
+        padding: 1.4vh 1vh;
+        margin: 2px 0;
+    }
+    
+    #links ul{
+        flex-direction: column;
+    }
+    
+    #services:hover #service_dropdown{
+        visibility: visible;
+    }
+    
+    #services:hover .ri-arrow-down-s-line{
+        transform: rotate(180deg);
+        display: inline-block;
+    }
+    
+    #service_dropdown{
+        background-color: rgba(236, 236, 236, 0.5);
+        position: absolute;
+        top: 5.3vh;
+        left: 0;
+        width: 100%;
+        padding-left: 5%;
+    }
+    
+    #service_dropdown li{
+        margin: .3vw 0 !important;
+    }
+    
+    #service_dropdown li a{
+        width: 100% !important;
+        font-size: 2vw !important;
+        padding: 1.4vh 1vh !important;
+    }
+    
+    #links a:hover{
+        background-color: rgb(180, 180, 180);
+    }
+    
+    #products h1, #machine h1{
+        font-size: 8vw;
+    }
+    
+    #products_image{
+        flex-wrap: wrap;
+        /* margin: 6vw 0; */
+    }
+    
+    #products_image a{
+        height: 30vw;
+        width: 100%;
+        background-color: transparent;
+        overflow: hidden;
+        margin: 10px 0;
+    }
+    
+    #products_image a img{
+        width: 100%;
+        object-fit: cover;
+    }
+    
+    #machine_details{
+        padding: 2vh 0;
+    }
+    
+    #machine_details div{
+        width: 100%;
+        padding: 10px 0 !important;
+    }
+    
+    #about_machine h2{
+        font-size: 5vw;
+    }
+    
+    #about_machine p{
+        font-size: 1.8vw;
+        margin-top: 10px;
+        margin-bottom: 0;
+    }
+
+    #about_machine p:nth-child(4){
+        margin-bottom: 20px;
+    }
+    
+    #about_machine a{
+        font-size: 2vw;
+        padding: 1vw 2vw;
+        border-radius: 5px;
+    }
+}
